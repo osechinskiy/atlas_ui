@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from "@mui/material/Box";
-import LeftImg from "../../img/mainPage/1.png";
+import LeftImg from "../../img/mainPage/mainPage1.png";
 import LeftTextContainerView from "./LeftTextContainerView.jsx";
 import {Stack} from "@mui/material";
 

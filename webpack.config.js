@@ -1,7 +1,8 @@
 const TerserPlugin = require("terser-webpack-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -9,7 +10,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'target/classes/public/'),
         filename: 'bundle.min.js',
-        libraryTarget: 'umd'
+        libraryTarget: 'umd',
+        publicPath: '/',
     },
 
     module: {
@@ -33,10 +35,9 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: f => {
-                            let dirNameInsideAssets = path.relative(path.join(__dirname, 'src'), path.dirname(f));
-                            return `${dirNameInsideAssets}/[name].[ext]`;
-                        }
+                        name: '[name].[ext]',
+                        outputPath: 'images',
+                        publicPath: '/images',
                     }
                 }],
             },
@@ -62,6 +63,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.html'
-        })
-    ]
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: path.resolve(__dirname, 'public'), to: path.resolve(__dirname, 'target/classes/public') }
+            ],
+        }),
+    ],
 }

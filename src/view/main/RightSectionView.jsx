@@ -1,7 +1,7 @@
 import React from 'react';
 import {Stack} from "@mui/material";
 import Box from "@mui/material/Box";
-import RightImg from "../../img/mainPage/2.png";
+import RightImg from "../../img/mainPage/mainPage2.png";
 import RightTextContainer from "./RiightTextContainerView.jsx";
 
 const RightSectionView = () => {

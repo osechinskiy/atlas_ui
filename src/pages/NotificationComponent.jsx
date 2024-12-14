@@ -3,7 +3,7 @@ import MainContainerComponent from "../components/container/MainContainerCompone
 import {Box, Stack} from "@mui/material";
 import BackButtonComponent from "../components/button/BackButtonComponent.jsx";
 import PropTypes from "prop-types";
-import Img from '../img/notification/1.png'
+import Img from '../img/notification/notification1.png'
 import { useLocation } from 'react-router-dom';
 
 

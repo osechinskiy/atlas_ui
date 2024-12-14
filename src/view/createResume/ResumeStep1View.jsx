@@ -5,7 +5,7 @@ import {Stack, Box, useMediaQuery} from "@mui/material";
 import OrderNameView from "../createTask/OrderNameView.jsx";
 import OrderDescriptionView from "../createTask/OrderDescriptionView.jsx";
 import StepImage from "../../components/steps/StepImage.jsx";
-import Img from "../../img/resume/1.png";
+import Img from "../../img/resume/resume1.png";
 
 const ResumeStep1View = ({
                              block,

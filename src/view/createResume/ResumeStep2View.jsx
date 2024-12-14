@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {Box, Stack, useMediaQuery} from "@mui/material";
 import StepImage from "../../components/steps/StepImage.jsx";
-import Img from "../../img/resume/2.png";
+import Img from "../../img/resume/resume2.png";
 import OrderSelectPhoneView from "../order/OrderSelectPhoneView.jsx";
 import PropTypes from "prop-types";
 import ResumeExperienceView from "./ResumeExperienceView.jsx";
